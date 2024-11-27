@@ -96,10 +96,13 @@
             <form>
                 <h3>Pay with card</h3>
                 <label for="card-number"></label>
+                <input type="tel" id="card-number" name="card-number" pattern="[0-9] {13,19}" maxlength="19" placeholder="1234 5678 9876 54321" required>
 
                 <label for="expiration-date"></label>
+                <input type="date" id="expiration-date" name="expiration-date" required>
 
                 <label for="cvc-cvv"></label>
+                <input type="text" id="cvc-cvv" name="cvc-cvv" maxlength="4" placeholder="CVC/CVV" required>
 
                 <p>
                     Payment total incl. VAT.<br>
@@ -112,7 +115,7 @@
                 
                 <label for="terms">Yes, I accept the terms and conditions.</label>
                 <input type="checkbox" id="terms" name="terms" required>
-                
+
                 <label for="newsletter">Yes please! Send me newsletters.</label>
                 <input type="checkbox" id="newsletter" name="newsletter">
             </form>
