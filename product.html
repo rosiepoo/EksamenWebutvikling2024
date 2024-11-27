@@ -32,30 +32,84 @@
             
         </nav>
     </header>
+
     <main>
-        <section id="banner">
-            <h2>Banner</h2>
+        <nav id="breadcrumbs">
+            <ul>
+                <li><a href="index.html"><span>Hjem /</span></a></li>
+                <li><a href="#"><span>Kategori</span> /</a></li>
+                <li><a href="#"><span>Produktnavn</span></a></li>
+            </ul>
+        </nav>
+        <section id="gallery">
+            <img src="https://picsum.photos/500" alt="Bilde av produkt">
+            <img src="https://picsum.photos/250" alt="Bilde av produkt">
+            <img src="https://picsum.photos/250" alt="Bilde av produkt">
+            <img src="https://picsum.photos/250" alt="Bilde av produkt">
         </section>
-        <section id="popular-products">
-            <h2>Våre mest populære produkter</h2>
-        </section>
-        <section id="popular-categories">
-            <h2>Våre mest populære kategorier</h2>
-        </section>
-        <section id="reviews">
-            <h2>Anmeldelser</h2>
+        <section id="product-information">
+            <h1>Produktnavn</h1>
+            <h3><a href="#">Merkenavn</a></h3>
+            <ul>
+                <li>5 195 kr inkl. mva.</li>
+                <li>Farge: <span>beige</span></li>
+            </ul>
         </section>
     </main>
-    <aside>
 
+    <aside>
+        <h2>Lignende produkter</h2>
+        <article class="product-card">
+            <picture>
+                <img src="https://picsum.photos/350" alt="Bilde av produkt">
+            </picture>
+            <a href="">Product name</a>
+            <p>1999 kr</p>
+        </article>
+        <article class="product-card">
+            <picture>
+                <img src="https://picsum.photos/350" alt="Bilde av produkt">
+            </picture>
+            <a href="">Product name</a>
+            <p>1999 kr</p>
+        </article>
+        <article class="product-card">
+            <picture>
+                <img src="https://picsum.photos/350" alt="Bilde av produkt">
+            </picture>
+            <a href="">Product name</a>
+            <p>1999 kr</p>
+        </article>
+        <article class="product-card">
+            <picture>
+                <img src="https://picsum.photos/350" alt="Bilde av produkt">
+            </picture>
+            <a href="">Product name</a>
+            <p>1999 kr</p>
+        </article>
+        <article class="product-card">
+            <picture>
+                <img src="https://picsum.photos/350" alt="Bilde av produkt">
+            </picture>
+            <a href="">Product name</a>
+            <p>1999 kr</p>
+        </article>
+        <article class="product-card">
+            <picture>
+                <img src="https://picsum.photos/350" alt="Bilde av produkt">
+            </picture>
+            <a href="">Product name</a>
+            <p>1999 kr</p>
+        </article>
     </aside>
+
     <footer id="global-footer">
         <section>
-            <h3>Logo</h3>
+            <h4>Logo</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id ipsum condimentum, finibus purus eget, pharetra libero.</p>
         </section>
         <section id="contact">
-            <h3>Kontakt</h3>
+            <h4>Kontakt</h4>
             <ul>
                 <li><i class="fa-solid fa-location-dot"></i></li>
                 <li><i class="fa-solid fa-phone"></i></li>
@@ -64,7 +118,7 @@
             </ul>
         </section>
         <section id="shortcuts">
-            <h3>Snarveier</h3>
+            <h4>Snarveier</h4>
             <nav>
                 <ul>
                     <li><a href="index.html#popular-products">Produkter</a></li>
@@ -74,7 +128,7 @@
             </nav>
         </section>
         <section id="social-media">
-            <h3>Sosiale medier</h3>
+            <h4>Sosiale medier</h4>
             <ul>
                 <li><a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
                 <li><a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
