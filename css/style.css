@@ -13,12 +13,24 @@ h1{font-size: 1.8rem;}
 h2{font-size: 1.6rem;}
 h3{font-size: 1.4rem;}
 h4{font-size: 1.2rem;}
+h1, h2, h3, h4{margin: 0;}
 p, a, span, i{font-size: 1rem;}
 
 img{width: 100%;}
 
+ul{
+    list-style: none; 
+    padding: 0; 
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
 
 #global-header, #global-footer{
+    padding: 1rem;
     nav{
         display: flex;
         flex-direction: column;
@@ -26,33 +38,34 @@ img{width: 100%;}
     }
 
     ul{
-        padding: 0;
-        margin: 0;
-        list-style: none;
         text-align: center;
-
         li{
             a{
                 display: inline-block;
                 padding: 0.5rem 1rem;
-                text-decoration: none;
-                color: black;
             }
         }
     }
 }
 
-main{
+main, aside{
     padding: 1rem;
 }
-main section{
+main section, aside{
     display: flex;
     flex-direction: column;
+    align-items: center;
     padding: 1rem 0;
 }
 
+#checkout section{
+    align-items: start;
+}
+
 #banner{
+    flex-wrap: wrap;
     background-color: antiquewhite;
+    background-size: cover;
     text-align: end;
 
     header{
@@ -63,9 +76,7 @@ main section{
         display: inline-block;
         padding: 1rem;
         background-color: white;
-        text-decoration: none;
         text-transform: uppercase;
-        color: black;
     }
 }
 
@@ -75,8 +86,6 @@ main section{
 
     ul{
         display: flex;
-        padding: 0;
-        list-style: none;
         gap: 1rem;
     }
     button{
@@ -112,13 +121,57 @@ main section{
     }
 }
 
+#product-information{
+    display: flex;
+    align-items: start;
+}
+
+
+#breadcrumbs{
+    width: 100%;
+    ul{
+        display: flex;
+        margin: 1rem 0;
+        gap: 0.2rem;
+    }
+}
+
+#checkout form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    input, button{
+        padding: 1rem;
+        margin: 0.5rem 0;
+    }
+    
+}
+
+.form-lists{
+    margin: 1rem 0;
+
+    li{
+        margin-bottom: 1rem;
+    }
+    input{
+        margin: 0.5rem;
+    }
+    label{
+        margin-left: 0.5rem;
+    }
+    span{
+        display: block;
+        margin-left: 3rem;
+        color: gray;
+    }
+}
+
 #global-footer{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: repeat(3, auto);
     gap: 2rem;
-
-    h3{margin: 0;}
 
     section{
         display: flex;
@@ -160,22 +213,25 @@ main section{
     grid-row: 3/4;
 }
 
-
-
 .product-card, .review-card{
     max-width: 350px;
     min-width: 200px;
     width: 100%;
 
-    a{
-        text-decoration: none;
-        color: black;
-    }
+    margin: 1rem 0;
 
-    h3, p{
+    figure, p{
+        margin: 0;
+    }
+    h3{
         padding: 0.5rem 0rem;
         margin: 0;
     }
+}
+
+#checkout .product-card{
+    max-width: none;
+    width: 100%;
 }
 
 .sr-only{

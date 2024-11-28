@@ -33,7 +33,7 @@
         </nav>
     </header>
 
-    <main>
+    <main id="checkout">
         <h1>Checkout</h1>
         <section id="shopping-cart">
             <h2>1. Your shopping bag</h2>
@@ -45,8 +45,10 @@
                         <img src="https://picsum.photos/300/300" alt="Picture of product">
                     </picture>
                 </figure>    
-                <a href="#"><h3>Product Name</h3></a>
-                <p>1999 kr</p>
+                <a href="product.html"><h3>Product Name</h3></a>
+                <p>1999 kr <br>
+                    Colour: Beige
+                </p>
             </article>
             <article class="product-card">
                 <figure>
@@ -56,8 +58,10 @@
                         <img src="https://picsum.photos/300/300" alt="Picture of product">
                     </picture>
                 </figure>    
-                <a href="#"><h3>Product Name</h3></a>
-                <p>1999 kr</p>
+                <a href="product.html"><h3>Product Name</h3></a>
+                <p>1999 kr <br>
+                    Colour: Beige
+                </p>
             </article>
         </section>
         <section id="personal-information">
@@ -88,17 +92,23 @@
             <form>
                 <fieldset>
                     <legend>Delivery options</legend>
-                    <label for="express-home">Express Home Delivery</label>
-                    <input type="radio" id="express-home" name="delivery-options" value="express-home" required>
-                    <span>3-4 Business Days</span>
-
-                    <label for="express-pickup">Express Package to Pickup Point</label>
-                    <input type="radio" id="express-pickup" name="delivery-options" value="express-pickup" required>
-                    <span>1-3 Business Days</span>
-
-                    <label for="standard-home">Standard Home Delivery</label>
-                    <input type="radio" id="standard-home" name="delivery-options" value="standard-home" required>
-                    <span>5-8 Business Days</span>
+                    <ul class="form-lists">
+                        <li>
+                            <input type="radio" id="express-home" name="delivery-options" value="express-home" required>
+                            <label for="express-home">Express Home Delivery</label>
+                            <span>3-4 Business Days</span>
+                        </li>
+                        <li>
+                            <input type="radio" id="express-pickup" name="delivery-options" value="express-pickup" required>
+                            <label for="express-pickup">Express Package to Pickup Point</label>
+                            <span>1-3 Business Days</span>
+                        </li>
+                        <li>
+                            <input type="radio" id="standard-home" name="delivery-options" value="standard-home" required>
+                            <label for="standard-home">Standard Home Delivery</label>
+                            <span>5-8 Business Days</span>
+                        </li>
+                    </ul>
                 </fieldset>
             </form>
         </section>
@@ -106,13 +116,13 @@
             <h2>4. Payment</h2>
             <form>
                 <h3>Pay with card</h3>
-                <label for="card-number"></label>
+                <label for="card-number" class="sr-only">Card number</label>
                 <input type="tel" id="card-number" name="card-number" pattern="[0-9] {13,19}" maxlength="19" placeholder="1234 5678 9876 54321" required>
 
-                <label for="expiration-date"></label>
+                <label for="expiration-date" class="sr-only">Expiration date</label>
                 <input type="date" id="expiration-date" name="expiration-date" required>
 
-                <label for="cvc-cvv"></label>
+                <label for="cvc-cvv" class="sr-only">CVC/CVV</label>
                 <input type="text" id="cvc-cvv" name="cvc-cvv" maxlength="4" placeholder="CVC/CVV" required>
 
                 <p>
@@ -123,12 +133,16 @@
                 <button type="submit">Complete Purchase</button>
                 
                 <p>You hereby confirm that the information and documents you have provided are correct and complete. The supplier reserves the right to cancel or terminate the contractual relationship if there is incorrect or incomplete information.</p>
-                
-                <label for="terms">Yes, I accept the terms and conditions.</label>
-                <input type="checkbox" id="terms" name="terms" required>
-
-                <label for="newsletter">Yes please! Send me newsletters.</label>
-                <input type="checkbox" id="newsletter" name="newsletter">
+                <ul class="form-lists">
+                    <li>
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">Yes, I accept the terms and conditions.</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="newsletter" name="newsletter">
+                        <label for="newsletter">Yes please! Send me newsletters.</label>
+                    </li>
+                </ul>
             </form>
         </section>
     </main>
