@@ -11,175 +11,195 @@
     <title>Exam | Shopping Cart</title>
 </head>
 <body>
-    <header id="global-header">
-        <nav>
-            <form>
-                <label for="search" class="sr-only">Search</label>
-                <input type="search" id="search" name="search" placeholder="Search here..." title="Type in product name or keyword">
-                <button type="submit" title="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </form>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#popular-products">Products</a></li>
-                <li><a href="index.html"><span class="logo">Logo</span></a></li>
-                <li><a href="index.html#popular-categories">Categories</a></li>
-                <li><a href="#global-footer">Contact us</a></li>
-            </ul>
-            <ul class="link-icons">
-                <li><a href="#"><i class="fa-regular fa-user"></i></a></li>
-                <li><a href="#"><i class="fa-regular fa-heart"></i></a></li>
-                <li><a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main id="checkout">
-        <h1>Checkout</h1>
-        <section id="shopping-cart">
-            <h2>1. Your shopping bag</h2>
-            <article class="product-card">
-                <figure>
-                    <picture>
-                        <source media="(min-width:650px)" srcset="https://picsum.photos/900/900">
-                        <source media="(min-width:465px)" srcset="https://picsum.photos/500/500">
-                        <img src="https://picsum.photos/300/300" alt="Picture of product">
-                    </picture>
-                </figure>    
-                <a href="product.html"><h3>Product Name</h3></a>
-                <p>1999 kr <br>
-                    Colour: Beige
-                </p>
-            </article>
-            <article class="product-card">
-                <figure>
-                    <picture>
-                        <source media="(min-width:650px)" srcset="https://picsum.photos/900/900">
-                        <source media="(min-width:465px)" srcset="https://picsum.photos/500/500">
-                        <img src="https://picsum.photos/300/300" alt="Picture of product">
-                    </picture>
-                </figure>    
-                <a href="product.html"><h3>Product Name</h3></a>
-                <p>1999 kr <br>
-                    Colour: Beige
-                </p>
-            </article>
-        </section>
-        <section id="personal-information">
-            <h2>2. Your information</h2>
-            <form>
-                <h3>Delivery address</h3>
-                <label for="first-name" class="sr-only">First Name</label>
-                <input type="text" id="first-name" name="first-name" placeholder="First Name*" required>
-
-                <label for="last-name" class="sr-only">Last Name</label>
-                <input type="text" id="last-name" name="last-name" placeholder="Last Name*" required>
-
-                <label for="address" class="sr-only">Street Address</label>
-                <input type="text" id="address" name="address" placeholder="Street Address*" required>
-
-                <label for="zip-code" class="sr-only">Zip Code</label>
-                <input type="number" id="zip-code" name="zip-code" placeholder="Zip Code*" required min="1000" max="9999">
-
-                <label for="city" class="sr-only">City</label>
-                <input type="text" id="city" name="city" placeholder="City*" required>
-
-                <button type="submit">Save</button>  
-                <button type="reset">Cancel</button>              
-            </form>
-        </section>
-        <section id="delivery">
-            <h2>3. Delivery</h2>
-            <form>
-                <fieldset>
-                    <legend>Delivery options</legend>
-                    <ul class="form-lists">
-                        <li>
-                            <input type="radio" id="express-home" name="delivery-options" value="express-home" required>
-                            <label for="express-home">Express Home Delivery</label>
-                            <span>3-4 Business Days</span>
-                        </li>
-                        <li>
-                            <input type="radio" id="express-pickup" name="delivery-options" value="express-pickup" required>
-                            <label for="express-pickup">Express Package to Pickup Point</label>
-                            <span>1-3 Business Days</span>
-                        </li>
-                        <li>
-                            <input type="radio" id="standard-home" name="delivery-options" value="standard-home" required>
-                            <label for="standard-home">Standard Home Delivery</label>
-                            <span>5-8 Business Days</span>
-                        </li>
-                    </ul>
-                </fieldset>
-            </form>
-        </section>
-        <section id="payment">
-            <h2>4. Payment</h2>
-            <form>
-                <h3>Pay with card</h3>
-                <label for="card-number" class="sr-only">Card number</label>
-                <input type="tel" id="card-number" name="card-number" pattern="[0-9] {13,19}" maxlength="19" placeholder="1234 5678 9876 54321" required>
-
-                <label for="expiration-date" class="sr-only">Expiration date</label>
-                <input type="date" id="expiration-date" name="expiration-date" required>
-
-                <label for="cvc-cvv" class="sr-only">CVC/CVV</label>
-                <input type="text" id="cvc-cvv" name="cvc-cvv" maxlength="4" placeholder="CVC/CVV" required>
-
-                <p>
-                    Payment total incl. VAT.<br>
-                    1199 kr
-                </p>
-
-                <button type="submit">Complete Purchase</button>
-                
-                <p>You hereby confirm that the information and documents you have provided are correct and complete. The supplier reserves the right to cancel or terminate the contractual relationship if there is incorrect or incomplete information.</p>
-                <ul class="form-lists">
-                    <li>
-                        <input type="checkbox" id="terms" name="terms" required>
-                        <label for="terms">Yes, I accept the terms and conditions.</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="newsletter" name="newsletter">
-                        <label for="newsletter">Yes please! Send me newsletters.</label>
-                    </li>
-                </ul>
-            </form>
-        </section>
-    </main>
-
-    <footer id="global-footer">
-        <section id="about">
-            <h3 class="logo">Logo</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id ipsum condimentum, finibus purus eget, pharetra libero.</p>
-        </section>
-        <section id="contact">
-            <h3>Contact</h3>
-            <ul>
-                <li><i class="fa-solid fa-location-dot"></i><span>Address:</span>B R A Veien 4, 1757 Halden</li>
-                <li><i class="fa-solid fa-phone"></i><span>Telephone:</span>69 60 80 00</li>
-                <li><i class="fa-solid fa-envelope"></i><span>E-mail:</span>halden@hiof.no</li>
-                <li><i class="fa-solid fa-clock"></i><span>Opening hours:</span>08:00 - 15:00</li>
-            </ul>
-        </section>
-        <section id="shortcuts">
-            <h3>Shortcuts</h3>
+    <div class="container">
+        <header id="global-header">
             <nav>
-                <ul>
+                <form id="search-bar">
+                    <label for="search" class="sr-only">Search</label>
+                    <input type="search" id="search" name="search" placeholder="Search here..." title="Type in product name or keyword">
+                    <button type="submit" title="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+                <ul id="navigation-list">
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="index.html#popular-products">Products</a></li>
-                    <li><a href="index.html#popular-categories">Category</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="index.html" class="logo">Logo</a></li>
+                    <li><a href="index.html#popular-categories">Categories</a></li>
+                    <li><a href="#global-footer">Contact us</a></li>
+                </ul>
+                <ul id="header-icons" class="link-icons">
+                    <li><a href="#"><i class="fa-regular fa-user"></i></a></li>
+                    <li><a href="#"><i class="fa-regular fa-heart"></i></a></li>
+                    <li><a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
                 </ul>
             </nav>
-        </section>
-        <section id="social-media">
-            <h3>Social media</h3>
-            <ul class="link-icons">
-                <li><a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
-                <li><a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
-                <li><a href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
-                <li><a href="https://www.pinterest.com" target="_blank"><i class="fa-brands fa-pinterest"></i></a></li>
-            </ul>
-        </section>
-    </footer>
+        </header>
+
+        <main id="checkout">
+            <h1>Checkout</h1>
+            <section id="shopping-cart">
+                <h2>1. Your shopping bag</h2>
+                <article class="product-card">
+                    <figure>
+                        <picture>
+                            <source media="(min-width:650px)" srcset="https://picsum.photos/900/900">
+                            <source media="(min-width:465px)" srcset="https://picsum.photos/500/500">
+                            <img src="https://picsum.photos/300/300" alt="Picture of product">
+                        </picture>
+                    </figure>   
+                    <section class="product-information">
+                        <a href="product.html"><h3>Product Name</h3></a>
+                        <p>1999 kr <br>
+                            Colour: Beige
+                        </p>
+                    </section> 
+                </article>
+                <article class="product-card">
+                    <figure>
+                        <picture>
+                            <source media="(min-width:650px)" srcset="https://picsum.photos/900/900">
+                            <source media="(min-width:465px)" srcset="https://picsum.photos/500/500">
+                            <img src="https://picsum.photos/300/300" alt="Picture of product">
+                        </picture>
+                    </figure>    
+                    <section class="product-information">
+                        <a href="product.html"><h3>Product Name</h3></a>
+                        <p>1999 kr <br>
+                            Colour: Beige
+                        </p>
+                    </section> 
+                </article>
+            </section>
+            <section id="personal-information">
+                <h2>2. Your information</h2>
+                <h3>Delivery address</h3>
+                <form>         
+                    <fieldset id="first-name">
+                        <label for="first-name">First Name</label>
+                    <input type="text" name="first-name" placeholder="First Name*" required>
+                    </fieldset>           
+
+                    <fieldset id="last-name">
+                        <label for="last-name">Last Name</label>
+                        <input type="text" name="last-name" placeholder="Last Name*" required>    
+                    </fieldset>
+
+                    <fieldset id="address">
+                        <label for="address">Street Address</label>
+                    <input type="text" name="address" placeholder="Street Address*" required>
+                    </fieldset>
+
+                    <fieldset id="zip-code">
+                        <label for="zip-code" class="post-address">Zip Code</label>
+                        <input type="number" name="zip-code" placeholder="Zip Code*" required min="1000" max="9999">
+                    </fieldset>
+
+                    <fieldset id="city">
+                        <label for="city">City</label>
+                        <input type="text" name="city" placeholder="City*" required>
+                    </fieldset>
+
+                    <button type="submit" id="save-button">Save</button>  
+                    <button type="reset" id="cancel-button">Cancel</button>              
+                </form>
+            </section>
+            <section id="delivery">
+                <h2>3. Delivery</h2>
+                <form>
+                    <fieldset>
+                        <legend>Delivery options</legend>
+                        <ul class="form-lists">
+                            <li>
+                                <input type="radio" id="express-home" name="delivery-options" value="express-home" required>
+                                <label for="express-home">Express Home Delivery</label>
+                                <span>3-4 Business Days</span>
+                            </li>
+                            <li>
+                                <input type="radio" id="express-pickup" name="delivery-options" value="express-pickup" required>
+                                <label for="express-pickup">Express Package to Pickup Point</label>
+                                <span>1-3 Business Days</span>
+                            </li>
+                            <li>
+                                <input type="radio" id="standard-home" name="delivery-options" value="standard-home" required>
+                                <label for="standard-home">Standard Home Delivery</label>
+                                <span>5-8 Business Days</span>
+                            </li>
+                        </ul>
+                    </fieldset>
+                </form>
+            </section>
+            <section id="payment">
+                <h2>4. Payment</h2>
+                <h3>Pay with card</h3>
+                <form>
+                    <fieldset id="card-number">
+                        <label for="card-number">Card number</label>
+                        <input type="tel" name="card-number" pattern="[0-9] {13,19}" maxlength="19" placeholder="1234 5678 9876 54321" required>
+                    </fieldset>
+                    <fieldset id="expiration-date">
+                        <label for="expiration-date">Expiration date</label>
+                        <input type="date" name="expiration-date" required>    
+                    </fieldset>
+                    <fieldset id="cvc-cvv">
+                        <label for="cvc-cvv">CVC/CVV</label>
+                        <input type="text" name="cvc-cvv" maxlength="4" placeholder="CVC/CVV" required>
+                    </fieldset>
+                
+                    <p id="total-pay">
+                        Payment total incl. VAT.
+                        <span>1199 kr</span>
+                    </p>
+
+                    <button type="submit" id="complete-purchase">Complete Purchase</button>
+                    
+                    <p id="confirmation">You hereby confirm that the information and documents you have provided are correct and complete. The supplier reserves the right to cancel or terminate the contractual relationship if there is incorrect or incomplete information.</p>
+                    <ul class="form-lists" id="checkbox">
+                        <li id="terms" >
+                            <input type="checkbox"name="terms" required>
+                            <label for="terms">Yes, I accept the terms and conditions.</label>
+                        </li>
+                        <li id="newsletter">
+                            <input type="checkbox" name="newsletter">
+                            <label for="newsletter">Yes please! Send me newsletters.</label>
+                        </li>
+                    </ul>
+                </form>
+            </section>
+        </main>
+
+        <footer id="global-footer">
+            <section id="about">
+                <h2 class="logo">Logo</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id ipsum condimentum, finibus purus eget, pharetra libero.</p>
+            </section>
+            <section id="contact">
+                <h3>Contact</h3>
+                <ul>
+                    <li><i class="fa-solid fa-location-dot"></i><span>Address:</span>B R A Veien 4, 1757 Halden</li>
+                    <li><i class="fa-solid fa-phone"></i><span>Telephone:</span>69 60 80 00</li>
+                    <li><i class="fa-solid fa-envelope"></i><span>E-mail:</span>halden@hiof.no</li>
+                    <li><i class="fa-solid fa-clock"></i><span>Opening hours:</span>08:00 - 15:00</li>
+                </ul>
+            </section>
+            <section id="shortcuts">
+                <h3>Shortcuts</h3>
+                <nav>
+                    <ul>
+                        <li><a href="index.html#popular-products">Products</a></li>
+                        <li><a href="index.html#popular-categories">Category</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </section>
+            <section id="social-media">
+                <h3>Social media</h3>
+                <ul class="link-icons">
+                    <li><a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a href="https://www.pinterest.com" target="_blank"><i class="fa-brands fa-pinterest"></i></a></li>
+                </ul>
+            </section>
+        </footer>
+    </div>
 </body>
 </html>
