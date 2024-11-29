@@ -406,7 +406,7 @@ a{
 
 #global-footer{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: repeat(3, auto);
     gap: 2rem;
     width: 100%;
@@ -439,10 +439,10 @@ a{
     }
     #contact{
         display: flex;
+        
         grid-column: 1/2;
         grid-row: 2/3;
         margin-left: 0.5rem;
-        flex-flow: row wrap;
 
         width: 100%;
     
@@ -745,6 +745,10 @@ i.fa-brands{
         }
     }
 
+    #product-page{
+        display: flex;
+    }
+
     #banner{
         position: relative;
         width: 100%;
@@ -949,7 +953,7 @@ i.fa-brands{
                 display: contents;
                 width: 50%;
             }
-            #clothing-size, #quantity{
+            .buy-size, .quantity{
                 grid-row: 2/3;
                 width: auto;
                 padding: 1rem;
