@@ -2,9 +2,14 @@
     box-sizing: border-box;
 }
 
+html{
+    height: 100%;
+}
+
 body{
     font-family: Arial, Helvetica, sans-serif;
 }
+
 
 .container{
     display: flex;
@@ -13,13 +18,14 @@ body{
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
+    padding-left: 1em;
+    padding-right: 1em;
 }
 
-h1{font-size: 1.8rem;}
-h2{font-size: 1.6rem;}
-h3{font-size: 1.4rem;}
-h4{font-size: 1.2rem;}
-h1, h2, h3, h4{margin: 0;}
+h1{font-size: 1.6rem;}
+h2{font-size: 1.4rem;}
+h3{font-size: 1.2rem;}
+h4{font-size: 1rem;}
 p, a, span{font-size: 1rem;}
 
 img{width: 100%;}
@@ -78,21 +84,12 @@ a{
     }
 }
 
-
-main, main section{
-    display: flex;
-    flex-direction: column;
-    padding: 1rem 0;
-    width: 100%;
-}
-
-#popular-products, #popular-categories, #banner, #reviews{
+#popular-products, #popular-categories, #banner{
     gap: 2.5rem;
     margin-bottom: 3rem;
     justify-content: center;
     text-align: center;
 }
-
 
 #checkout section{
     align-items: start;
@@ -143,6 +140,8 @@ main, main section{
 }
 
 #popular-products{
+    display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 1rem;
 
@@ -164,6 +163,8 @@ main, main section{
 }
 
 #popular-categories{
+    display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 1rem;
 
@@ -188,25 +189,38 @@ main, main section{
         width: 100%;
         border: 1px solid black;
         border-radius: 25px;
-    }
+        color: white;
+        }
 
     #category-1{
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        
+        background-image: url(../img/rose-1280.jpg);
     }
-    #category-1{
-        
+    #category-2{
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url(../img/breakfast640.jpg);
     }
-    #category-1{
-        
+    #category-3{
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url(../img/wedi1280.jpg);
     }
-    #category-1{
-        
+    #category-4{
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url(../img/baby-shoes1280.jpg);
     }
-    #category-1{
-        
+    #category-5{
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url(../img/vietnam1280.jpg);
     }
 }
 
@@ -218,6 +232,7 @@ main, main section{
 }
 
 #product-page{
+    margin: 10rem 0;
     flex-direction: column;
     justify-content: center;
     margin: 0;
@@ -225,6 +240,8 @@ main, main section{
     #gallery{
         padding: 0;
         display: flex;
+        flex-direction: column;
+        width: 100%;
         justify-content: space-between;
 
         #thumbnail-img{
@@ -240,6 +257,7 @@ main, main section{
             }
             picture{
                 max-width: 160px;
+                img{aspect-ratio: 1;}
             }
         }
         #active-img{flex-basis: 100%;}
@@ -322,18 +340,14 @@ main, main section{
 
                     span{
                         position: absolute;
-                        right: 25px;
-                    }
-                }
+                        right: 25px;}}
                 p {
                     padding: 5px;
                     margin: 0;
                     font-size: 14px;
                     font-weight: lighter;
                     span{
-                        font-weight: bold;
-                    }
-                  }
+                        font-weight: bold;}}
             }
         }
     }
@@ -359,7 +373,6 @@ main, main section{
         padding: 1rem;
         margin: 0.5rem 0;
     }
-    
 }
 
 .form-lists{
@@ -393,9 +406,10 @@ main, main section{
 
 #global-footer{
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(3, auto);
     gap: 2rem;
+    width: 100%;
 
     section{
         display: flex;
@@ -413,50 +427,51 @@ main, main section{
     h3{
         text-transform: uppercase;
     }
-}
 
-#about{
-    grid-column: 1/3;
-    grid-row: 1/2;
-    margin-left: 0.5rem;
-    
-    .logo{
-        padding: 0;
-    }
-}
-#contact{
-    grid-column: 1/2;
-    grid-row: 2/3;
-    margin-left: 0.5rem;
-
-    i, span {
-        margin-right: 0.5rem;
-    }
-    span{
-        font-weight: bold;
-    }
-}
-#shortcuts{
-    grid-column: 2/3;
-    grid-row: 2/3;
-
-    ul li a{padding: 0;}
-}
-#social-media{
-    grid-column: 1/3;
-    grid-row: 3/4;
-
-    h3{
+    #about{
+        grid-column: 1/2;
+        grid-row: 1/2;
         margin-left: 0.5rem;
+        
+        .logo{
+            padding: 0;
+        }
+    }
+    #contact{
+        display: flex;
+        grid-column: 1/2;
+        grid-row: 2/3;
+        margin-left: 0.5rem;
+        flex-flow: row wrap;
+
+        width: 100%;
+    
+        i, span {
+            margin-right: 0.5rem;
+        }
+        span{
+            font-weight: bold;
+        }
+    }
+    #shortcuts{
+        grid-column: 1/2;
+        grid-row: 3/4;
+    
+        ul li a{padding: 0;}
+    }
+    #social-media{
+        grid-column: 1/2;
+        grid-row: 4/5;
     }
 }
+
 
 .scroll-card, .product-card{
     display: grid;
     grid-template-columns: 3fr 2fr;
     grid-template-rows: repeat(3, auto);
-    max-width: 350px;
-    min-width: 250px;
+    max-width: 300px;
+    min-width: 200px;
     width: 100%;
 
     position: relative;
@@ -465,11 +480,12 @@ main, main section{
 
     figure, p, a, span{
         margin: 0;
-        padding: 0.5rem 0;
+        padding: 0;
     }
 
     img{
         border-radius: 25px;
+        aspect-ratio: 1;
     }
 
     figure{
@@ -477,6 +493,7 @@ main, main section{
         grid-row: 1/2;
     }
     a{
+        align-items: center;
         grid-column: 1/2;
         grid-row: 2/3;
     }
@@ -488,6 +505,9 @@ main, main section{
         grid-column: 2/3;
         grid-row: 2/3;
         text-align: end;
+        position: absolute;
+        right: 0;
+        bottom: 15px;
         font-size: 1rem;
     }
     ol{
@@ -513,7 +533,7 @@ main, main section{
         cursor: pointer;
         border-radius: 100%;
         background-color: rgb(255, 255, 255, 0.5);
-        color: rgb(0, 0, 0, 0, 0.5);
+        color: rgb(0, 0, 0, 0.5);
         transition: background-color 0.3s ease-in-out;
         i.fa-heart{
             font-size: 20px;
@@ -571,7 +591,6 @@ main, main section{
 }
 
 #checkout .product-card{
-    max-width: none;
     width: 100%;
 }
 
@@ -596,6 +615,25 @@ i.fa-brands{
     padding: 0;
 }
 
+#personal-information input, #cardnumber input, #cvccvv input, #expirationdate input{
+    width: 100%;
+}
+
+#shopping-cart, #payment, #delivery, #personal-information{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#checkout{
+    .product-buy{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 0.5rem;
+    }
+}
+
 .logo{
     width: 100%;
     font-size: 35px;
@@ -604,12 +642,47 @@ i.fa-brands{
     letter-spacing: -5px;
     text-decoration: none;
 }
+#similar-products{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
 
-.container{
-    
+    h2{
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    #see-more{
+        display: none;
+        grid-column: 2/3;
+        grid-row: 1/2;
+        text-align: end;
+    }
+    .scrollable{
+        width: 100%;
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
 }
 
+.scrollable{
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 1rem;
+    padding: 1rem;
+    margin: 0;
+}
+
+
+
 @media only screen and (min-width: 800px){
+    
+    .container{
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+    }
+
     #global-header{
         nav{
             display: grid;
@@ -639,10 +712,37 @@ i.fa-brands{
         }
     }
 
-    main{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+    #global-footer{
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-rows: repeat(2, auto);
+        margin-bottom: 3rem;
+
+        section{
+            margin: 0.5rem 0;
+        }
+
+        #about{
+            grid-column: 1/4;
+            grid-row: 1/2;
+            margin: 0;
+        }
+
+        #contact, #shortcuts, #social-media{
+            grid-row: 2/3;
+        }
+        #contact{
+            display: flex;
+            flex-direction: column;
+            grid-column: 1/2;
+            margin: 0;
+        }
+        #shortcuts{
+            grid-column: 2/3;
+        }
+        #social-media{
+            grid-column: 3/4;
+        }
     }
 
     #banner{
@@ -650,22 +750,21 @@ i.fa-brands{
         width: 100%;
         height: 400px;
 
+        text-align: start;
 
         .slides{
             height: 100%;
             width: 100%;
             display: flex;
             flex-direction: column;
-            padding: 2rem;
+            padding: 50px;
             border-radius: 35px;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
 
             color: white;
-
         }
-
 
         #prev, #next {
             display: block;
@@ -704,9 +803,9 @@ i.fa-brands{
     #popular-categories{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(4, auto);
+        grid-template-rows: repeat(4, 150px);
         gap: 1rem;
-
+        padding: 1rem;
 
         #category-1, #category-2, #category-3, #category-4, #category-5, #popular-categories header{
             padding: 3rem;
@@ -717,27 +816,22 @@ i.fa-brands{
             grid-row: 1 / 2;
         }
         #category-1{
-            background-color: hsl(146, 52%, 72%);
             grid-column: 1 / 2;
             grid-row: 2 / 2;
         }
         #category-2{
-            background-color: hsl(0, 0%, 100%);
             grid-column: 2 / 3;
             grid-row: 2 / 3;
         }
         #category-3{
-            background-color: hsl(337, 52%, 72%);
             grid-column: 3 / 4;
             grid-row: 2 / 4;
         }
         #category-4{
-            background-color: hsl(204, 52%, 72%);
             grid-column: 3 / 4;
             grid-row: 4 / 5;
         }
         #category-5{
-            background-color: hsl(271, 52%, 72%);
             grid-column: 1 / 3;
             grid-row: 3 / 5;
         }
@@ -750,7 +844,7 @@ i.fa-brands{
     }
 
     #popular-products, #popular-categories, #banner, #reviews #product-page{
-        margin-bottom: 2rem;
+        margin-bottom: 50px;
     }
 
     .scrollable{
@@ -785,7 +879,6 @@ i.fa-brands{
         grid-template-rows: repeat(2, auto);
         text-align: start;
         
-
         header{
             grid-column: 1/2;
             grid-row: 1/2;
@@ -797,11 +890,18 @@ i.fa-brands{
         }
     }
 
+    #shopping-cart, #personal-information, #delivery, #payment{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+
 
     #shopping-cart, #personal-information, #delivery, #payment{
         border: 1px solid black;
         padding: 2.5rem 5rem;
         margin: 2rem 0;
+
     }
 
     #shopping-cart{
@@ -846,6 +946,7 @@ i.fa-brands{
             top: 40%;
             align-items: center;
             label{
+                display: contents;
                 width: 50%;
             }
             #clothing-size, #quantity{
@@ -1038,37 +1139,9 @@ i.fa-brands{
             text-align: end;
         }
         .scrollable{
-            grid-column: 1/3;
+            width: 100%;
+            grid-column: 1/2;
             grid-row: 2/3;
         }
     }
-
-    #global-footer{
-        display: grid;
-        grid-template-columns: 2fr 1fr 1fr;
-        grid-template-rows: repeat(2, auto);
-        margin-bottom: 3rem;
-
-        section{
-            margin: 0.5rem 0;
-        }
-    }
-    #about{
-        grid-column: 1/4;
-        grid-row: 1/2;
-        margin: 0;
-    }
-    #contact, #shortcuts, #social-media{
-        grid-row: 2/3;
-    }
-    #contact{
-        grid-column: 1/2;
-        margin: 0;
-    }
-    #shortcuts{
-        grid-column: 2/3;
-    }
-    #social-media{
-        grid-column: 3/4;
-    }
-}
+}}
