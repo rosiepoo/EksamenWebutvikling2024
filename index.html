@@ -36,15 +36,49 @@
 
         <main>
             <section id="banner">
-                <header>
-                    <h1>Banner</h1>
+                <h1 class="sr-only">Banner</h1>
+                <article id="main-banner" class="slides" style="background-image: url(img/heart1280.jpg);">
+                    <h2>Banner</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id ipsum condimentum, finibus purus eget, pharetra libero.</p>
                     <a href="#">Les mer</a>
-                </header>
+                </article>
+                <article class="slides" style="background-image: url(img/clothing1280.jpg);">
+                    <h2>Banner 2</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id ipsum condimentum, finibus purus eget, pharetra libero.</p>
+                    <a href="#">Les mer</a>
+                </article>
+                <article class="slides" style="background-image: url(img/breakfast1280.jpg);">
+                    <h2>Banner 3</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id ipsum condimentum, finibus purus eget, pharetra libero.</p>
+                    <a href="#">Les mer</a>
+                </article>
+                <button id="prev" onclick="plusDivs(-1)"><i class="fa-solid fa-arrow-left"></i></button>
+                <button id="next" onclick="plusDivs(+1)"><i class="fa-solid fa-arrow-right"></i></Button>
+                <script>
+                    var slideIndex = 1;
+                    showDivs(slideIndex);
+
+                    function plusDivs(n) {
+                    showDivs(slideIndex += n);
+                    }
+
+                    function showDivs(n) {
+                    var i;
+                    var x = document.getElementsByClassName("slides");
+                    if (n > x.length) {slideIndex = 1}
+                    if (n < 1) {slideIndex = x.length} ;
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";
+                    }
+                    x[slideIndex-1].style.display = "block";
+                    }
+                </script>
             </section>
             <section id="popular-products">
-                <h2>Our most popular products</h2>
-                <p>Discover the best of the best</p>
+                <header>
+                    <h2>Our most popular products</h2>
+                    <p>Discover the best of the best</p>
+                </header>
                 <ul>
                     <li><button>New Product</button></li>
                     <li><button>Special Price</button></li>
@@ -53,121 +87,123 @@
                 <article class="product-card">
                     <figure>
                         <picture>
-                            <source media="(min-width:650px)" srcset="https://picsum.photos/900/900">
-                            <source media="(min-width:465px)" srcset="https://picsum.photos/500/500">
-                            <img src="https://picsum.photos/300/300" alt="Picture of product">
+                            <source media="(min-width:800px)" srcset="img/baby-shoes1280.jpg">
+                            <img src="img/baby-shoes1280.jpg" alt="Picture of babyshoes">
                         </picture>
                     </figure>    
                     <a href="product.html"><h3>Product Name</h3></a>
-                    <p>1999 kr</p>
+                    <span>1999 kr</span>
                     <ol>
                         <li><i class="fa-solid fa-star"></i></li>
                         <li><i class="fa-solid fa-star"></i></li>
                         <li><i class="fa-solid fa-star"></i></li>
                         <li><i class="fa-solid fa-star"></i></li>
                         <li><i class="fa-regular fa-star"></i></li>
-                        <li>842 Reviews</li>
                     </ol>
+                    <p class="total-reviews">842 Reviews</p>
+                    <button class="likebtn"><i class="fa-regular fa-heart"></i></button>
                 </article>
                 <article class="product-card">
                     <figure>
                         <picture>
-                            <source media="(min-width:650px)" srcset="https://picsum.photos/900/900">
-                            <source media="(min-width:465px)" srcset="https://picsum.photos/500/500">
-                            <img src="https://picsum.photos/300/300" alt="Picture of product">
+                            <source media="(min-width:800px)" srcset="img/baby-shoes1280.jpg">
+                            <img src="img/baby-shoes1280.jpg" alt="Picture of babyshoes">
                         </picture>
                     </figure>    
                     <a href="product.html"><h3>Product Name</h3></a>
-                    <p>1999 kr</p>
+                    <span>1999 kr</span>
                     <ol>
                         <li><i class="fa-solid fa-star"></i></li>
                         <li><i class="fa-solid fa-star"></i></li>
                         <li><i class="fa-solid fa-star"></i></li>
                         <li><i class="fa-solid fa-star"></i></li>
                         <li><i class="fa-regular fa-star"></i></li>
-                        <li>842 Reviews</li>
                     </ol>
+                    <p class="total-reviews">842 Reviews</p>
+                    <button class="likebtn"><i class="fa-regular fa-heart"></i></button>
                 </article>
                 <article class="product-card">
                     <figure>
                         <picture>
-                            <source media="(min-width:650px)" srcset="https://picsum.photos/900/900">
-                            <source media="(min-width:465px)" srcset="https://picsum.photos/500/500">
-                            <img src="https://picsum.photos/300/300" alt="Picture of product">
+                            <source media="(min-width:800px)" srcset="img/baby-shoes1280.jpg">
+                            <img src="img/baby-shoes1280.jpg" alt="Picture of babyshoes">
                         </picture>
                     </figure>    
                     <a href="product.html"><h3>Product Name</h3></a>
-                    <p>1999 kr</p>
+                    <span>1999 kr</span>
                     <ol>
                         <li><i class="fa-solid fa-star"></i></li>
                         <li><i class="fa-solid fa-star"></i></li>
                         <li><i class="fa-solid fa-star"></i></li>
                         <li><i class="fa-solid fa-star"></i></li>
                         <li><i class="fa-regular fa-star"></i></li>
-                        <li>842 Reviews</li>
                     </ol>
+                    <p class="total-reviews">842 Reviews</p>
+                    <button class="likebtn"><i class="fa-regular fa-heart"></i></button>
                 </article>
                 <article class="product-card">
                     <figure>
                         <picture>
-                            <source media="(min-width:650px)" srcset="https://picsum.photos/900/900">
-                            <source media="(min-width:465px)" srcset="https://picsum.photos/500/500">
-                            <img src="https://picsum.photos/300/300" alt="Picture of product">
+                            <source media="(min-width:800px)" srcset="img/baby-shoes1280.jpg">
+                            <img src="img/baby-shoes1280.jpg" alt="Picture of babyshoes">
                         </picture>
                     </figure>    
                     <a href="product.html"><h3>Product Name</h3></a>
-                    <p>1999 kr</p>
+                    <span>1999 kr</span>
                     <ol>
                         <li><i class="fa-solid fa-star"></i></li>
                         <li><i class="fa-solid fa-star"></i></li>
                         <li><i class="fa-solid fa-star"></i></li>
                         <li><i class="fa-solid fa-star"></i></li>
                         <li><i class="fa-regular fa-star"></i></li>
-                        <li>842 Reviews</li>
                     </ol>
+                    <p class="total-reviews">842 Reviews</p>
+                    <button class="likebtn"><i class="fa-regular fa-heart"></i></button>
                 </article>
                 <article class="product-card">
                     <figure>
                         <picture>
-                            <source media="(min-width:650px)" srcset="https://picsum.photos/900/900">
-                            <source media="(min-width:465px)" srcset="https://picsum.photos/500/500">
-                            <img src="https://picsum.photos/300/300" alt="Picture of product">
+                            <source media="(min-width:800px)" srcset="img/baby-shoes1280.jpg">
+                            <img src="img/baby-shoes1280.jpg" alt="Picture of babyshoes">
                         </picture>
                     </figure>    
                     <a href="product.html"><h3>Product Name</h3></a>
-                    <p>1999 kr</p>
+                    <span>1999 kr</span>
                     <ol>
                         <li><i class="fa-solid fa-star"></i></li>
                         <li><i class="fa-solid fa-star"></i></li>
                         <li><i class="fa-solid fa-star"></i></li>
                         <li><i class="fa-solid fa-star"></i></li>
                         <li><i class="fa-regular fa-star"></i></li>
-                        <li>842 Reviews</li>
                     </ol>
+                    <p class="total-reviews">842 Reviews</p>
+                    <button class="likebtn"><i class="fa-regular fa-heart"></i></button>
                 </article> 
                 <article class="product-card">
                     <figure>
                         <picture>
-                            <source media="(min-width:650px)" srcset="https://picsum.photos/900/900">
-                            <source media="(min-width:465px)" srcset="https://picsum.photos/500/500">
-                            <img src="https://picsum.photos/300/300" alt="Picture of product">
+                            <source media="(min-width:800px)" srcset="img/baby-shoes1280.jpg">
+                            <img src="img/baby-shoes1280.jpg" alt="Picture of babyshoes">
                         </picture>
                     </figure>    
                     <a href="product.html"><h3>Product Name</h3></a>
-                    <p>1999 kr</p>
+                    <span>1999 kr</span>
                     <ol>
                         <li><i class="fa-solid fa-star"></i></li>
                         <li><i class="fa-solid fa-star"></i></li>
                         <li><i class="fa-solid fa-star"></i></li>
                         <li><i class="fa-solid fa-star"></i></li>
                         <li><i class="fa-regular fa-star"></i></li>
-                        <li>842 Reviews</li>
                     </ol>
+                    <p class="total-reviews">842 Reviews</p>
+                    <button class="likebtn"><i class="fa-regular fa-heart"></i></button>
                 </article>  
             </section>
             <section id="popular-categories">
-                <h2>Our most popular categories</h2>
-                <p>Discover the best of the best</p>
+                <header>
+                    <h2>Our most popular categories</h2>
+                    <p>Discover the best of the best</p>
+                </header>
                 <article id="category-1">
                     <h3>Category 1</h3>
                 </article>
@@ -185,63 +221,95 @@
                 </article>
             </section>
             <section id="reviews">
-                <h2>Reviews</h2>
-                <article class="review-card">
-                    <picture>
-                        <img src="https://picsum.photos/200" alt="Picture of product">
-                    </picture>
-                    <h3>Jake P. Sullivan</h3>
-                    <ol>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-regular fa-star"></i></li>
-                    </ol>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id ipsum condimentum, finibus purus eget, pharetra libero.</p>
-                </article>
-                <article class="review-card">
-                    <picture>
-                        <img src="https://picsum.photos/200" alt="Picture of product">
-                    </picture>
-                    <h3>Jake P. Sullivan</h3>
-                    <ol>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-regular fa-star"></i></li>
-                    </ol>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id ipsum condimentum, finibus purus eget, pharetra libero.</p>
-                </article>
-                <article class="review-card">
-                    <picture>
-                        <img src="https://picsum.photos/200" alt="Picture of product">
-                    </picture>
-                    <h3>Jake P. Sullivan</h3>
-                    <ol>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-regular fa-star"></i></li>
-                    </ol>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id ipsum condimentum, finibus purus eget, pharetra libero.</p>
-                </article>
-                <article class="review-card">
-                    <picture>
-                        <img src="https://picsum.photos/200" alt="Picture of product">
-                    </picture>
-                    <h3>Jake P. Sullivan</h3>
-                    <ol>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-regular fa-star"></i></li>
-                    </ol>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id ipsum condimentum, finibus purus eget, pharetra libero.</p>
-                </article>
+                <header><h2>Reviews</h2></header>
+
+                <section class="scrollable">
+                    <h3 class="sr-only">Scroll container</h3>
+                    <article class="review-card">
+                        <picture>
+                            <img src="img/doc1280.png" alt="Picture of doctor">
+                        </picture>
+                        <h4>Jake P. Sullivan</h4>
+                        <ol>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-regular fa-star"></i></li>
+                        </ol>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id ipsum condimentum, finibus purus eget, pharetra libero.</p>
+                    </article>
+                    <article class="review-card">
+                        <picture>
+                            <img src="https://picsum.photos/200" alt="Picture of product">
+                        </picture>
+                        <h4>Jake P. Sullivan</h4>
+                        <ol>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-regular fa-star"></i></li>
+                        </ol>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id ipsum condimentum, finibus purus eget, pharetra libero.</p>
+                    </article>
+                    <article class="review-card">
+                        <picture>
+                            <img src="https://picsum.photos/200" alt="Picture of product">
+                        </picture>
+                        <h4>Jake P. Sullivan</h4>
+                        <ol>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-regular fa-star"></i></li>
+                        </ol>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id ipsum condimentum, finibus purus eget, pharetra libero.</p>
+                    </article>
+                    <article class="review-card">
+                        <picture>
+                            <img src="img/doc1280.png" alt="Picture of doctor">
+                        </picture>
+                        <h4>Jake P. Sullivan</h4>
+                        <ol>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-regular fa-star"></i></li>
+                        </ol>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id ipsum condimentum, finibus purus eget, pharetra libero.</p>
+                    </article>
+                    <article class="review-card">
+                        <picture>
+                            <img src="img/doc1280.png" alt="Picture of doctor">
+                        </picture>
+                        <h4>Jake P. Sullivan</h4>
+                        <ol>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-regular fa-star"></i></li>
+                        </ol>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id ipsum condimentum, finibus purus eget, pharetra libero.</p>
+                    </article>
+                    <article class="review-card">
+                        <picture>
+                            <img src="https://picsum.photos/200" alt="Picture of product">
+                        </picture>
+                        <h4>Jake P. Sullivan</h4>
+                        <ol>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-regular fa-star"></i></li>
+                        </ol>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id ipsum condimentum, finibus purus eget, pharetra libero.</p>
+                    </article>
+                </section>
             </section>
         </main>
 

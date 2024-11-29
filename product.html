@@ -36,11 +36,26 @@
 
         <main id="product-page">
             <nav id="breadcrumbs">
-                <ul>
-                    <li><a href="index.html"><span>Home /</span></a></li>
-                    <li><a href="#"><span>Category</span> /</a></li>
-                    <li><a href="#"><span>Product name</span></a></li>
-                </ul>
+                <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+                    <li itemprop="itemListElement" itemscope
+                        itemtype="https://schema.org/ListItem">
+                      <a itemprop="item" href="index.html">
+                      <span itemprop="name">Home</span> <i class="fa-solid fa-angle-right"></i></a>
+                      <meta itemprop="position" content="1" />
+                    </li>
+                    <li itemprop="itemListElement" itemscope
+                        itemtype="https://schema.org/ListItem">
+                      <a itemprop="item" href="index.html#popular-categories">
+                      <span itemprop="name">Category</span> <i class="fa-solid fa-angle-right"></i></a>
+                      <meta itemprop="position" content="2" />
+                    </li>
+                    <li itemprop="itemListElement" itemscope
+                        itemtype="https://schema.org/ListItem">
+                      <a itemprop="item" href="index.html#popular-categories">
+                      <span itemprop="name">Product Name</span></a>
+                      <meta itemprop="position" content="3" />
+                    </li>
+                </ol>
             </nav>
             <section id="gallery">
                 <h2 class="sr-only">Product Gallery</h2>
@@ -52,6 +67,7 @@
                     </picture>
                 </figure>
                 <section id="thumbnail-img">
+                    <h3 class="sr-only">Thumbnails</h3>
                     <figure>
                         <picture>
                             <source media="(min-width:650px)" srcset="https://picsum.photos/900/900">
@@ -75,12 +91,12 @@
                     </figure>
                 </section>
             </section>
-            <section class="product-information">
+            <section id="product-information">
                 <header>
                     <h1>Product name</h1>
                     <h2><a href="#">Brand name</a></h2>
                 </header>
-                <ul>
+                <ul id="product-detail">
                     <li>5 195 kr incl. VAT.</li>
                     <li>Colour: <span>beige</span></li>
                 </ul>
@@ -94,126 +110,175 @@
                         <option value="L">L</option>
                         <option value="XL">XL</option>
                     </select>
+
+                    <button type="submit" id="to-cart">Add to cart</button>
+                    <button type="submit" id="favourite"><i class="fa-regular fa-heart"></i></button>
                 </form>
+                <ul id="extra-information">
+                    <li>
+                        <details>
+                            <summary>Material and maintenance<i class="fa-solid fa-plus"></i><i class="fa-solid fa-plus"></i></summary>
+                            <p><span>Material Composition:</span>
+                                <br>This garment is crafted from a premium blend of organic cotton (70%) and recycled polyester (30%), ensuring both comfort and sustainability. The fabric is lightweight yet durable, offering a soft and breathable feel perfect for all-day wear. The use of recycled materials reduces environmental impact, making this a thoughtful addition to your wardrobe.</p>
+                            <p><span>Care Instructions:</span>
+                                <br>To maintain the quality and longevity of this item:
+                                
+                                <br>- Machine Wash: Wash at 30°C on a gentle cycle with similar colors.
+                                <br>- Detergent: Use mild detergent, avoiding bleach or harsh chemicals.
+                                <br>- Drying: Air dry flat to prevent shrinking or damage. Avoid tumble drying.
+                                <br>- Ironing: If needed, iron on a low setting. For best results, iron while slightly damp.</p>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Productc details<i class="fa-solid fa-plus"></i></summary>
+                            <p></p>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Size chart<i class="fa-solid fa-plus"></i></summary>
+                            <p></p>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Reviews <span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i> 82</span>
+                            </summary>
+                        </details>
+                    </li>
+                </ul>
             </section>
         </main>
 
-        <aside id="similar-products">
-            <h2>Similar products</h2>
-            <article class="product-card">
-                <figure>
-                    <picture>
-                        <source media="(min-width:650px)" srcset="https://picsum.photos/900/900">
-                        <source media="(min-width:465px)" srcset="https://picsum.photos/500/500">
-                        <img src="https://picsum.photos/300/300" alt="Picture of product">
-                    </picture>
-                </figure>    
-                <a href="product.html"><h3>Product Name</h3></a>
-                <p>1999 kr</p>
-                <ol>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-regular fa-star"></i></li>
-                    <li>842 Reviews</li>
-                </ol>
-            </article>  
-            <article class="product-card">
-                <figure>
-                    <picture>
-                        <source media="(min-width:650px)" srcset="https://picsum.photos/900/900">
-                        <source media="(min-width:465px)" srcset="https://picsum.photos/500/500">
-                        <img src="https://picsum.photos/300/300" alt="Picture of product">
-                    </picture>
-                </figure>    
-                <a href="product.html"><h3>Product Name</h3></a>
-                <p>1999 kr</p>
-                <ol>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-regular fa-star"></i></li>
-                    <li>842 Reviews</li>
-                </ol>
-            </article>  
-            <article class="product-card">
-                <figure>
-                    <picture>
-                        <source media="(min-width:650px)" srcset="https://picsum.photos/900/900">
-                        <source media="(min-width:465px)" srcset="https://picsum.photos/500/500">
-                        <img src="https://picsum.photos/300/300" alt="Picture of product">
-                    </picture>
-                </figure>    
-                <a href="product.html"><h3>Product Name</h3></a>
-                <p>1999 kr</p>
-                <ol>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-regular fa-star"></i></li>
-                    <li>842 Reviews</li>
-                </ol>
-            </article>  
-            <article class="product-card">
-                <figure>
-                    <picture>
-                        <source media="(min-width:650px)" srcset="https://picsum.photos/900/900">
-                        <source media="(min-width:465px)" srcset="https://picsum.photos/500/500">
-                        <img src="https://picsum.photos/300/300" alt="Picture of product">
-                    </picture>
-                </figure>    
-                <a href="product.html"><h3>Product Name</h3></a>
-                <p>1999 kr</p>
-                <ol>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-regular fa-star"></i></li>
-                    <li>842 Reviews</li>
-                </ol>
-            </article>  
-            <article class="product-card">
-                <figure>
-                    <picture>
-                        <source media="(min-width:650px)" srcset="https://picsum.photos/900/900">
-                        <source media="(min-width:465px)" srcset="https://picsum.photos/500/500">
-                        <img src="https://picsum.photos/300/300" alt="Picture of product">
-                    </picture>
-                </figure>    
-                <a href="product.html"><h3>Product Name</h3></a>
-                <p>1999 kr</p>
-                <ol>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-regular fa-star"></i></li>
-                    <li>842 Reviews</li>
-                </ol>
-            </article>  
-            <article class="product-card">
-                <figure>
-                    <picture>
-                        <source media="(min-width:650px)" srcset="https://picsum.photos/900/900">
-                        <source media="(min-width:465px)" srcset="https://picsum.photos/500/500">
-                        <img src="https://picsum.photos/300/300" alt="Picture of product">
-                    </picture>
-                </figure>    
-                <a href="product.html"><h3>Product Name</h3></a>
-                <p>1999 kr</p>
-                <ol>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-regular fa-star"></i></li>
-                    <li>842 Reviews</li>
-                </ol>
-            </article>  
+        <aside>
+            <section id="similar-products">
+                <h2>Similar products</h2>
+                <a href="index.html#popular-products" id="see-more">See more similar products <i class="fa-solid fa-arrow-right"></i></a>
+                <section class="scrollable">
+                    <h3 class="sr-only">Product cards</h3>
+                    <article class="scroll-card">
+                        <figure>
+                            <picture>
+                                <source media="(min-width:650px)" srcset="https://picsum.photos/900/900">
+                                <source media="(min-width:465px)" srcset="https://picsum.photos/500/500">
+                                <img src="https://picsum.photos/300/300" alt="Picture of product">
+                            </picture>
+                        </figure>    
+                        <a href="product.html"><h3>Product Name</h3></a>
+                        <span>1999 kr</span>
+                        <ol>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-regular fa-star"></i></li>
+                        </ol>
+                        <p class="total-reviews">842 Reviews</p>
+                        <button class="likebtn"><i class="fa-regular fa-heart"></i></button>
+                    </article>  
+                    <article class="scroll-card">
+                        <figure>
+                            <picture>
+                                <source media="(min-width:650px)" srcset="https://picsum.photos/900/900">
+                                <source media="(min-width:465px)" srcset="https://picsum.photos/500/500">
+                                <img src="https://picsum.photos/300/300" alt="Picture of product">
+                            </picture>
+                        </figure>    
+                        <a href="product.html"><h3>Product Name</h3></a>
+                        <span>1999 kr</span>
+                        <ol>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-regular fa-star"></i></li>
+                        </ol>
+                        <p class="total-reviews">842 Reviews</p>
+                        <button class="likebtn"><i class="fa-regular fa-heart"></i></button>
+                    </article>  
+                    <article class="scroll-card">
+                        <figure>
+                            <picture>
+                                <source media="(min-width:650px)" srcset="https://picsum.photos/900/900">
+                                <source media="(min-width:465px)" srcset="https://picsum.photos/500/500">
+                                <img src="https://picsum.photos/300/300" alt="Picture of product">
+                            </picture>
+                        </figure>    
+                        <a href="product.html"><h3>Product Name</h3></a>
+                        <span>1999 kr</span>
+                        <ol>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-regular fa-star"></i></li>
+                        </ol>
+                        <p class="total-reviews">842 Reviews</p>
+                        <button class="likebtn"><i class="fa-regular fa-heart"></i></button>
+                    </article>  
+                    <article class="scroll-card">
+                        <figure>
+                            <picture>
+                                <source media="(min-width:650px)" srcset="https://picsum.photos/900/900">
+                                <source media="(min-width:465px)" srcset="https://picsum.photos/500/500">
+                                <img src="https://picsum.photos/300/300" alt="Picture of product">
+                            </picture>
+                        </figure>    
+                        <a href="product.html"><h3>Product Name</h3></a>
+                        <span>1999 kr</span>
+                        <ol>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-regular fa-star"></i></li>
+                        </ol>
+                        <p class="total-reviews">842 Reviews</p>
+                        <button class="likebtn"><i class="fa-regular fa-heart"></i></button>
+                    </article>  
+                    <article class="scroll-card">
+                        <figure>
+                            <picture>
+                                <source media="(min-width:650px)" srcset="https://picsum.photos/900/900">
+                                <source media="(min-width:465px)" srcset="https://picsum.photos/500/500">
+                                <img src="https://picsum.photos/300/300" alt="Picture of product">
+                            </picture>
+                        </figure>    
+                        <a href="product.html"><h3>Product Name</h3></a>
+                        <span>1999 kr</span>
+                        <ol>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-regular fa-star"></i></li>
+                        </ol>
+                        <p class="total-reviews">842 Reviews</p>
+                        <button class="likebtn"><i class="fa-regular fa-heart"></i></button>
+                    </article>  
+                    <article class="scroll-card">
+                        <figure>
+                            <picture>
+                                <source media="(min-width:650px)" srcset="https://picsum.photos/900/900">
+                                <source media="(min-width:465px)" srcset="https://picsum.photos/500/500">
+                                <img src="https://picsum.photos/300/300" alt="Picture of product">
+                            </picture>
+                        </figure>    
+                        <a href="product.html"><h3>Product Name</h3></a>
+                        <span>1999 kr</span>
+                        <ol>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-regular fa-star"></i></li>
+                        </ol>
+                        <p class="total-reviews">842 Reviews</p>
+                        <button class="likebtn"><i class="fa-regular fa-heart"></i></button>
+                    </article>  
+                </section>
+            </section>
         </aside>
 
         <footer id="global-footer">

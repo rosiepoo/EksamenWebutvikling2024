@@ -39,6 +39,7 @@
             <section id="shopping-cart">
                 <h2>1. Your shopping bag</h2>
                 <article class="product-card">
+                    <h4 class="sr-only">Product card</h4>
                     <figure>
                         <picture>
                             <source media="(min-width:650px)" srcset="https://picsum.photos/900/900">
@@ -46,14 +47,32 @@
                             <img src="https://picsum.photos/300/300" alt="Picture of product">
                         </picture>
                     </figure>   
-                    <section class="product-information">
+                    <section class="product-buy">
                         <a href="product.html"><h3>Product Name</h3></a>
                         <p>1999 kr <br>
                             Colour: Beige
                         </p>
+                        <form>
+                            <label for="clothing-size">Size</label>
+                            <select name="clothing-size" id="clothing-size">
+                                <option value="">Choose size</option>
+                                <option value="XS">XS</option>
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                            </select>
+                            <label for="quantity">Quantity</label>
+                            <input type="number" id="quantity" name="quantity" min="1" value="1">
+                        </form>
+                        <ul>
+                            <li><i class="fa-regular fa-heart"></i></li>
+                            <li><i class="fa-solid fa-trash"></i></li>
+                        </ul>
                     </section> 
                 </article>
                 <article class="product-card">
+                    <h4 class="sr-only">Product card</h4>
                     <figure>
                         <picture>
                             <source media="(min-width:650px)" srcset="https://picsum.photos/900/900">
@@ -61,42 +80,69 @@
                             <img src="https://picsum.photos/300/300" alt="Picture of product">
                         </picture>
                     </figure>    
-                    <section class="product-information">
+                    <section class="product-buy">
                         <a href="product.html"><h3>Product Name</h3></a>
                         <p>1999 kr <br>
                             Colour: Beige
                         </p>
+                        <form>
+                            <label for="clothing-size">Size</label>
+                            <select name="clothing-size" id="clothing-size">
+                                <option value="">Choose size</option>
+                                <option value="XS">XS</option>
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                            </select>
+                            <label for="quantity">Quantity</label>
+                            <input type="number" id="quantity" name="quantity" min="1" value="1">
+                        </form>
+                        <ul>
+                            <li><i class="fa-regular fa-heart"></i></li>
+                            <li><i class="fa-solid fa-trash"></i></li>
+                        </ul>
                     </section> 
                 </article>
             </section>
             <section id="personal-information">
                 <h2>2. Your information</h2>
-                <h3>Delivery address</h3>
-                <form>         
-                    <fieldset id="first-name">
+                <form>    
+                    <h3 id="deliveryinfo">Delivery address</h3>     
+                    <fieldset id="firstname">
                         <label for="first-name">First Name</label>
-                    <input type="text" name="first-name" placeholder="First Name*" required>
+                        <input type="text" id="first-name" name="first-name" placeholder="First Name*" required>
                     </fieldset>           
 
-                    <fieldset id="last-name">
+                    <fieldset id="lastname">
                         <label for="last-name">Last Name</label>
-                        <input type="text" name="last-name" placeholder="Last Name*" required>    
+                        <input type="text" id="last-name" name="last-name" placeholder="Last Name*" required>    
                     </fieldset>
 
-                    <fieldset id="address">
+                    <fieldset id="street-address">
                         <label for="address">Street Address</label>
-                    <input type="text" name="address" placeholder="Street Address*" required>
+                    <input type="text" id="address" name="address" placeholder="Street Address*" required>
                     </fieldset>
 
-                    <fieldset id="zip-code">
+                    <fieldset id="postnumber">
                         <label for="zip-code" class="post-address">Zip Code</label>
-                        <input type="number" name="zip-code" placeholder="Zip Code*" required min="1000" max="9999">
+                        <input type="number" id="zip-code" name="zip-code" placeholder="Zip Code*" required min="1000" max="9999">
                     </fieldset>
 
-                    <fieldset id="city">
+                    <fieldset id="postcity">
                         <label for="city">City</label>
-                        <input type="text" name="city" placeholder="City*" required>
+                        <input type="text" id="city" name="city" placeholder="City*" required>
                     </fieldset>
+
+                    <h3 id="contactinfo">Contact information</h3>
+                    <fieldset id="email">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="e-mail" name="e-mail" placeholder="example@hiof.no*" required>
+                    </fieldset> 
+                    <fieldset id="tlf">
+                        <label for="telephone">Telephone</label>
+                        <input type="email" id="telephone" name="telephone" placeholder="+47 49 **** 14" required>
+                    </fieldset> 
 
                     <button type="submit" id="save-button">Save</button>  
                     <button type="reset" id="cancel-button">Cancel</button>              
@@ -106,22 +152,34 @@
                 <h2>3. Delivery</h2>
                 <form>
                     <fieldset>
-                        <legend>Delivery options</legend>
+                        <legend><h3></h3></legend>
                         <ul class="form-lists">
                             <li>
                                 <input type="radio" id="express-home" name="delivery-options" value="express-home" required>
                                 <label for="express-home">Express Home Delivery</label>
-                                <span>3-4 Business Days</span>
+                                <ul class="delivery-details">
+                                    <li><span>3-4 Business Days</span></li>
+                                    <li>69 kr <i class="fa-solid fa-truck-fast"></i></li>
+                                    <li><p>Morbi ut ipsum odio. Vestibulum suscipit egestas libero, quis porta diam ultricies in. Aenean suscipit est sed nulla iaculis, a viverra velit pellentesque. Nam sed tempus nulla. Sed facilisis faucibus tellus a aliquet. Nulla bibendum congue felis eget sagittis. Praesent eget viverra ligula, sed ornare ante.</p></li>
+                                </ul>
                             </li>
                             <li>
                                 <input type="radio" id="express-pickup" name="delivery-options" value="express-pickup" required>
                                 <label for="express-pickup">Express Package to Pickup Point</label>
-                                <span>1-3 Business Days</span>
+                                <ul class="delivery-details">
+                                    <li><span>1-3 Business Days</span></li>
+                                    <li>59 kr <i class="fa-solid fa-truck-fast"></i></li>
+                                    <li><p>Morbi ut ipsum odio. Vestibulum suscipit egestas libero, quis porta diam ultricies in. Aenean suscipit est sed nulla iaculis, a viverra velit pellentesque. Nam sed tempus nulla. Sed facilisis faucibus tellus a aliquet. Nulla bibendum congue felis eget sagittis. Praesent eget viverra ligula, sed ornare ante.</p></li>
+                                </ul>
                             </li>
                             <li>
                                 <input type="radio" id="standard-home" name="delivery-options" value="standard-home" required>
                                 <label for="standard-home">Standard Home Delivery</label>
-                                <span>5-8 Business Days</span>
+                                <ul class="delivery-details">
+                                    <li><span>5-8 Business Days</span></li>
+                                    <li>Free <i class="fa-solid fa-box"></i></li>
+                                    <li><p>Morbi ut ipsum odio. Vestibulum suscipit egestas libero, quis porta diam ultricies in. Aenean suscipit est sed nulla iaculis, a viverra velit pellentesque. Nam sed tempus nulla. Sed facilisis faucibus tellus a aliquet. Nulla bibendum congue felis eget sagittis. Praesent eget viverra ligula, sed ornare ante.</p></li>
+                                </ul>
                             </li>
                         </ul>
                     </fieldset>
@@ -129,19 +187,19 @@
             </section>
             <section id="payment">
                 <h2>4. Payment</h2>
-                <h3>Pay with card</h3>
+                <h3>Pay with card <i class="fa-solid fa-credit-card"></i></h3>
                 <form>
-                    <fieldset id="card-number">
+                    <fieldset id="cardnumber">
                         <label for="card-number">Card number</label>
-                        <input type="tel" name="card-number" pattern="[0-9] {13,19}" maxlength="19" placeholder="1234 5678 9876 54321" required>
+                        <input type="tel" id="card-number" name="card-number" pattern="[0-9] {13,19}" maxlength="19" placeholder="1234 5678 9876 54321" required>
                     </fieldset>
-                    <fieldset id="expiration-date">
+                    <fieldset id="expirationdate">
                         <label for="expiration-date">Expiration date</label>
-                        <input type="date" name="expiration-date" required>    
+                        <input type="date" id="expiration-date" name="expiration-date" required>    
                     </fieldset>
-                    <fieldset id="cvc-cvv">
+                    <fieldset id="cvccvv">
                         <label for="cvc-cvv">CVC/CVV</label>
-                        <input type="text" name="cvc-cvv" maxlength="4" placeholder="CVC/CVV" required>
+                        <input type="text" id="cvc-cvv" name="cvc-cvv" maxlength="4" placeholder="CVC/CVV" required>
                     </fieldset>
                 
                     <p id="total-pay">
@@ -152,13 +210,13 @@
                     <button type="submit" id="complete-purchase">Complete Purchase</button>
                     
                     <p id="confirmation">You hereby confirm that the information and documents you have provided are correct and complete. The supplier reserves the right to cancel or terminate the contractual relationship if there is incorrect or incomplete information.</p>
-                    <ul class="form-lists" id="checkbox">
-                        <li id="terms" >
-                            <input type="checkbox"name="terms" required>
+                    <ul id="checkbox">
+                        <li id="check1" >
+                            <input type="checkbox" id="terms" name="terms" required>
                             <label for="terms">Yes, I accept the terms and conditions.</label>
                         </li>
-                        <li id="newsletter">
-                            <input type="checkbox" name="newsletter">
+                        <li id="check2">
+                            <input type="checkbox" id="newsletter" name="newsletter">
                             <label for="newsletter">Yes please! Send me newsletters.</label>
                         </li>
                     </ul>
